@@ -6,16 +6,16 @@ provider "azurerm" {
   client_secret   = var.client_secret
 }
 
-resource "azurerm_resource_group" "example" {
-  name     = "example-resources"
+resource "azurerm_resource_group" "RG" {
+  name     = "AKS1"
   location = "East US"
 }
 
-resource "azurerm_kubernetes_cluster" "example" {
-  name                = "example-aks"
+resource "azurerm_kubernetes_cluster" "AKSResource1" {
+  name                = "Cluster1"
   location            = azurerm_resource_group.example.location
   resource_group_name = azurerm_resource_group.example.name
-  dns_prefix          = "exampleaks"
+  dns_prefix          = "dnsaks"
 
   default_node_pool {
     name       = "agentpool"
