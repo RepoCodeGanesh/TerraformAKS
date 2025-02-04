@@ -1,6 +1,6 @@
 name: Assign AKS Roles
 on:
-  push:
+  workflow_dispatch
 
 jobs:
   deploy:
