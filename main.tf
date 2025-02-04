@@ -29,5 +29,5 @@ resource "azurerm_kubernetes_cluster" "AKSResource1" {
 }
 
 output "aks_credentials_command" {
-  value = "az aks get-credentials --resource-group ${azurerm_resource_group.example.name} --name ${azurerm_kubernetes_cluster.example.name} --overwrite-existing"
+  value = "az aks get-credentials --resource-group ${azurerm_resource_group.RG.name} --name ${azurerm_kubernetes_cluster.AKSResource1.name} --overwrite-existing"
 }
