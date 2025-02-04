@@ -13,8 +13,8 @@ resource "azurerm_resource_group" "RG" {
 
 resource "azurerm_kubernetes_cluster" "AKSResource1" {
   name                = "Cluster1"
-  location            = azurerm_resource_group.example.location
-  resource_group_name = azurerm_resource_group.example.name
+  location            = azurerm_resource_group.RG.location
+  resource_group_name = azurerm_resource_group.RG.name
   dns_prefix          = "dnsaks"
 
   default_node_pool {
